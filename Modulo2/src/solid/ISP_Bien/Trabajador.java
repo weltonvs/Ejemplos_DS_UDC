@@ -29,5 +29,4 @@ public interface Trabajador {
         System.out.print("Y mi proyecto personal es:");
         t.proyectoPersonal();
     }
-    
 }
