@@ -1,5 +1,5 @@
 
-package patrones.instaciaunica;
+package patrones.instanciaunica;
 
 /**
  * Clase InstanciaUnica
