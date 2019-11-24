@@ -20,6 +20,15 @@ public class App {
         punto = punto.mover(10, 20);
         System.out.println("El nuevo valor de x=" + punto.getX() + " y=" + punto.getY());
         System.out.println("El hash del nuevo punto es:" + punto.hashCode());
+        
+        System.out.println("Utilizando la clase Mutable");
+        PuntoInmutable puntoInmutable2 = new PuntoInmutable(5, 7);
+        PuntoMutable puntoMutable = new PuntoMutable(puntoInmutable2);
+        
+        puntoMutable = puntoMutable.mover(1, 2);
+        
+        puntoInmutable2 = puntoMutable.getInMutable();
+        System.out.println("Punto x=" + puntoInmutable2.getX() + " y=" + puntoInmutable2.getY());
     }
     
 }
