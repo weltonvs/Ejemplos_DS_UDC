@@ -8,12 +8,13 @@ import java.util.Random;
 /**
  * Clase Vector
  * Patrón Estrategia
- * Ejemplo de clase de DS
+ * Parte Contexto del patrón.
  * @author weltonvs
  */
 public class Vector {
     
     private List<Integer> datos = new ArrayList<>();
+    private AlgoritmoOrdenacion algoritmo;
 
     /**
      * Constructor vacio.
@@ -64,5 +65,17 @@ public class Vector {
      */
     public int longitud() {
         return datos.size();
+    }
+    
+    public AlgoritmoOrdenacion getAlgoritmo(){
+        return algoritmo;
+    } 
+    
+    public void setAlgoritmo(AlgoritmoOrdenacion algoritmo) {
+        this.algoritmo = algoritmo;
+    }
+    
+    public void ordenaVector(){
+        algoritmo.ordena(this);
     }
 }
