@@ -4,7 +4,7 @@ package patronestrategia;
 /**
  * Clase OrdenacionBurbuja
  * Patrón Estrategia.
- * Parte de Estrategia Concreta A del patrón estrategia.
+ * Parte de Estrategia Concreta del patrón estrategia.
  * @author weltonvs
  */
 public class OrdenacionBurbuja implements AlgoritmoOrdenacion{
