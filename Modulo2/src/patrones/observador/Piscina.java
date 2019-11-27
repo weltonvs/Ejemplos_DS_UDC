@@ -28,6 +28,7 @@ public class Piscina extends Observavel{
         nivel += incremento;
         if(nivel > MAX){
             setCambiada();
+            //Modelo Pull de notificación, donde la responsabilidad del estado de la piscina esta en la clase Piscina.
             notificarObservadores(Limite.NIVEL_MAX);//Avisa a los observadores que el nivel ha llegado al nivel máximo.
         }
     }
@@ -36,6 +37,7 @@ public class Piscina extends Observavel{
         nivel -= decremento;
         if(nivel < MIN){
             setCambiada();
+            //Modelo Pull de notificación, donde la responsabilidad del estado de la piscina esta en la clase Piscina.
             notificarObservadores(Limite.NIVEL_MIN);//Avisa a los observadores que el nivel ha llegado al nivel mínimo.
         }
     }
