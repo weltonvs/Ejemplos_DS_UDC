@@ -1,19 +1,16 @@
 
 package patrones.observador;
 
-import java.util.Observable;
-import java.util.Observer;
-
 /**
  * Clase AlarmaPiscina que es una extención de la clase Observer de Java.
  * Patrón Observador.
  * Observer es la parte Observador del patrón y AlarmaPiscina es el ObservadorConcreto.
  * @author weltonvs
  */
-public class AlarmaPiscina implements Observer{
+public class AlarmaPiscina implements Observador{
 
     @Override
-    public void update(Observable o, Object arg) {
+    public void actualizar(Observavel o, Object arg) {
         Piscina p = (Piscina) o;
         int cantidad;
         

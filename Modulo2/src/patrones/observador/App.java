@@ -14,8 +14,8 @@ public class App {
         AlarmaPiscina alarmaBomberos = new AlarmaPiscina();
         
         //Registra dos observadores en la piscinaMucipal para vigilar el nivel de agua.
-        piscinaMunicipal.addObserver(alarmaBomberos);
-        piscinaMunicipal.addObserver(alarmaBomberos);
+        piscinaMunicipal.adicionarObservador(alarmaBomberos);
+        piscinaMunicipal.adicionarObservador(alarmaBomberos);
         
         System.out.println("Nivel de agua es " + piscinaMunicipal.getNivel());
         piscinaMunicipal.abreGrifo(10);//Modifico el nivel de agua.

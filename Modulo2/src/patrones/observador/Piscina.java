@@ -1,7 +1,7 @@
 
 package patrones.observador;
 
-import java.util.Observable;
+
 
 /**
  * Clase Piscina que es una extención de la clase Observable de Java.
@@ -9,7 +9,7 @@ import java.util.Observable;
  * Observable es la parte Sujeto del patrón y Piscina es el SujetoConcreto
  * @author weltonvs
  */
-public class Piscina extends Observable{
+public class Piscina extends Observavel{
     public static final int MAX = 100;
     public static final int MIN = 50;
     
@@ -24,21 +24,19 @@ public class Piscina extends Observable{
         return nivel;
     }
     
-    
-    
     public void abreGrifo(int incremento){
         nivel += incremento;
         if(nivel > MAX){
-            setChanged();
-            notifyObservers(Limite.NIVEL_MAX);//Avisa a los observadores que el nivel ha llegado al nivel máximo.
+            setCambiada();
+            notificarObservadores(Limite.NIVEL_MAX);//Avisa a los observadores que el nivel ha llegado al nivel máximo.
         }
     }
     
     public void quitaTapon(int decremento){
         nivel -= decremento;
         if(nivel < MIN){
-            setChanged();
-            notifyObservers(Limite.NIVEL_MIN);//Avisa a los observadores que el nivel ha llegado al nivel mínimo.
+            setCambiada();
+            notificarObservadores(Limite.NIVEL_MIN);//Avisa a los observadores que el nivel ha llegado al nivel mínimo.
         }
     }
 }
