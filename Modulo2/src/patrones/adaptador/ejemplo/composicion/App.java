@@ -3,7 +3,7 @@ package patrones.adaptador.ejemplo.composicion;
 
 import java.sql.Date;
 import java.time.LocalDate;
-import java.util.Calendar;
+
 
 /**
  * Clase App
@@ -18,6 +18,7 @@ public class App {
         StandartReservasACME reserva = new StandarReservasACMEAdapter(sistemaAdaptado);
         Date fecha = Date.valueOf(LocalDate.now());
         reserva.createReservation(fecha, 10, "1", "Welton");
+        reserva.createReservation(fecha, 30, "2", "Lucia Maria");
         
         System.out.println(reserva.getInfoHotel("1"));
     }
